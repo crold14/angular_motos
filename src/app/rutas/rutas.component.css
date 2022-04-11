@@ -1,0 +1,50 @@
+.cabecera img {
+    height: 200px;
+    width: 100%;
+}
+
+.cabecera {
+    height: 200px;
+    /* background-image: url("https: //image.shutterstock.com/image-photo/skye-island-scotland-panorama-area-260nw-1469202971.jpg"); */
+    background-size: 100%;
+    background-position: 50%;
+}
+
+.rutas {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+
+}
+
+.rutas img {
+    width: 100%;
+    display: block;
+}
+
+.ruta {
+    background-color: lightblue;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+
+@media (min-width: 467px) {
+    .rutas {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+
+@media (min-width:768px) {
+    .rutas {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

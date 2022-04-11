@@ -1,0 +1,12 @@
+<div class="cabecera">
+    <figure>
+        <img src="https://image.shutterstock.com/image-photo/skye-island-scotland-panorama-area-260nw-1469202971.jpg" alt="">
+    </figure>
+</div>
+<div class="rutas">
+    <div class="ruta" *ngFor="let ruta of arrRutas">
+        <img [src]="ruta.image" alt="">
+        <p>{{ruta.name}}</p>
+    </div>
+
+</div>
