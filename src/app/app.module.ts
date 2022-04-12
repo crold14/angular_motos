@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { RutasComponent } from './rutas/rutas.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RutasComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
