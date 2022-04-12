@@ -1,7 +1,15 @@
 export interface Ruta {
 
     name: string,
-    image: string,
+    descr: string,
+    dist: number,
+    img: string,
+    dif: string,
+    latini: string,
+    longini: string,
+    latfin: string,
+    longfin: string,
+
 
 
 }

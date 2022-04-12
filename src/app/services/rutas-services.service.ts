@@ -13,10 +13,10 @@ export class RutasService {
   constructor(
     private hhtpClient: HttpClient
   ) {
-    this.baseUrl = 'https://rickandmortyapi.com/api/character'
+    this.baseUrl = 'http://localhost:3000/api'
   }
 
   getALL(pPage: number = 1) {
-    return firstValueFrom(this.hhtpClient.get<any>(this.baseUrl))
+    return firstValueFrom(this.hhtpClient.get<any>(this.baseUrl + '/rutas'))
   }
 }

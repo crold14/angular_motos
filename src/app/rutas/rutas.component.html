@@ -5,8 +5,11 @@
 </div>
 <div class="rutas">
     <div class="ruta" *ngFor="let ruta of arrRutas">
-        <img [src]="ruta.image" alt="">
-        <p>{{ruta.name}}</p>
+        <!-- <img [src]="ruta.img" alt=""> -->
+        <h3>{{ruta.name}}</h3>
+        <p>Distancia: {{ruta.dist}}</p>
+        <p>Descripcion: {{ruta.descr}}</p>
+        <p>Dificultad: {{ruta.dif}}</p>
     </div>
 
 </div>

@@ -17,7 +17,9 @@ export class RutasComponent implements OnInit {
 
   async ngOnInit() {
     const response = await this.rutasService.getALL()
-    this.arrRutas = response.results;
+    this.arrRutas = response;
+
+
 
 
   }
