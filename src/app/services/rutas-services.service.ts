@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import { Usuario } from '../interfaces/usuario.interface';
 
 
 @Injectable({
@@ -11,12 +12,19 @@ export class RutasService {
   baseUrl: string;
 
   constructor(
-    private hhtpClient: HttpClient
+    private httpClient: HttpClient
   ) {
     this.baseUrl = 'http://localhost:3000/api'
   }
 
   getALL(pPage: number = 1) {
-    return firstValueFrom(this.hhtpClient.get<any>(this.baseUrl + '/rutas'))
+    return firstValueFrom(this.httpClient.get<any>(this.baseUrl + '/rutas'))
   }
+
+  loginUser(pNewUser: Usuario) {
+    return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/usuarios', pNewUser))
+  }
+
+
+
 }
