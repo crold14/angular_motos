@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RutasService } from '../services/rutas-services.service';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +9,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  formulario: FormGroup;
 
-  constructor() { }
+  constructor(
+    private rutasService: RutasService,
+    private router: Router
+  ) {
+
+    this.formulario = new FormGroup({
+      email: new FormControl('', [
+        Validators.required,
+      ]),
+      password: new FormControl('', [
+        Validators.required
+      ]),
+    })
+  }
 
   ngOnInit(): void {
+  }
+
+  async onSubmit() {
+    const response = await this.rutasService.loginUser(this.formulario.value)
+    alert('Login correcto')
+    console.log(response);
+
+
+    this.router.navigate(['/rutas'])
+
   }
 
 }

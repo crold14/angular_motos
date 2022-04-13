@@ -1,0 +1,16 @@
+.container {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    width: 600px;
+    background-color: lightblue;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+a {
+
+    text-align: center;
+    color: darkblue;
+
+
+}

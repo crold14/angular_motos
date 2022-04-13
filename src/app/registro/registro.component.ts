@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Usuario } from '../interfaces/usuario.interface';
+
 import { RutasService } from '../services/rutas-services.service';
 
 @Component({
@@ -39,6 +39,7 @@ export class RegistroComponent implements OnInit {
       ]),
       email: new FormControl('', [
         Validators.required,
+        Validators.pattern(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/),
       ]),
       img: new FormControl('', [
         // Validators.required,
@@ -46,9 +47,7 @@ export class RegistroComponent implements OnInit {
       password: new FormControl('', [
         Validators.required,
       ]),
-      repite_password: new FormControl('', [
-        Validators.required,
-      ]),
+
 
     })
 
@@ -59,18 +58,20 @@ export class RegistroComponent implements OnInit {
   }
 
   async onSubmit() {
-    const response = await this.rutasService.loginUser(this.formulario.value)
+    const response = await this.rutasService.registerUser(this.formulario.value)
     console.log(this.formulario.value);
+    alert('Registro completo')
 
     this.router.navigate(['/login'])
 
   }
 
 
-  // checkError(fieldName: string, errorType: string) {
-  //   return this.formulario.get(fieldName).hasError(errorType) && this.formulario.get(fieldName).touched;
 
-  // }
+  checkError(fieldName: string, errorType: string) {
+    return this.formulario.get(fieldName).hasError(errorType) && this.formulario.get(fieldName).touched;
+
+  }
 
 }
 
