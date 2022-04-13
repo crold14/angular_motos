@@ -21,9 +21,11 @@ export class DetalleRutasComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(async params => {
-      this.detalle = await this.rutasService.getById(params['rutaId']);
 
-      console.log(params);
+      this.detalle = await this.rutasService.getById(params['rutaId']);
+      console.log(this.detalle);
+
+
     });
   }
 }

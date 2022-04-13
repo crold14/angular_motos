@@ -4,12 +4,15 @@
     </figure>
 </div>
 <div class="rutas">
-    <div class="ruta" *ngFor="let ruta of arrRutas">
+    <div class="ruta" *ngFor="let ruta of arrRutas" [routerLink]="['/rutas', ruta.id]" routerLinkActive="activo">
         <!-- <img [src]="ruta.img" alt=""> -->
         <h3>{{ruta.name}}</h3>
         <p>Distancia: {{ruta.dist}} Km</p>
         <p>Descripcion: {{ruta.descr}}</p>
         <p>Dificultad: {{ruta.dif}}</p>
+        <button [routerLink]="['/rutas', ruta.id]" routerLinkActive="activo">IR A LA RUTA</button>
     </div>
+
+
 
 </div>

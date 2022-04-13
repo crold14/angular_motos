@@ -1,3 +1,18 @@
 .container {
     display: flex;
 }
+
+.foto,
+.descripcion {
+    margin: 50px;
+}
+
+img {
+    width: 500px;
+}
+
+.titulo,
+.button {
+    margin-bottom: 30px;
+    text-align: center;
+}

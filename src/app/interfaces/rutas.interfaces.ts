@@ -1,5 +1,5 @@
 export interface Ruta {
-
+    id: number,
     name: string,
     descr: string,
     dist: number,
