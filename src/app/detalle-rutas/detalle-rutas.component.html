@@ -1,1 +1,23 @@
-<p>{{detalle.name}}</p>
+<div class="titulo">
+    <h2>{{detalle.name}}</h2>
+</div>
+<div class="button">
+    <button [routerLink]="['/rutas']" routerLinkActive="activo">VOLVER A LAS RUTAS</button>
+</div>
+<div class="container">
+
+
+    <div class="foto">
+        <figure>
+            <img width="200" [src]="detalle.img">
+        </figure>
+    </div>
+    <div class="descripcion">
+
+        <p>Distancia: {{detalle.dist}} Km</p>
+        <p>Descripcion: {{detalle.descr}}</p>
+        <p>Dificultad: {{detalle.dif}}</p>
+
+    </div>
+
+</div>
