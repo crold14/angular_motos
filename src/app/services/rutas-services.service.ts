@@ -22,7 +22,7 @@ export class RutasService {
   }
 
   registerUser(pNewUser: Usuario) {
-    return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/usuarios', pNewUser))
+    return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/usuarios/registro', pNewUser))
   }
 
   loginUser(pUser: Usuario) {
