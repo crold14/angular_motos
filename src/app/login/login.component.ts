@@ -31,11 +31,19 @@ export class LoginComponent implements OnInit {
 
   async onSubmit() {
     const response = await this.rutasService.loginUser(this.formulario.value)
-    alert('Login correcto')
+
     console.log(response);
 
+    if (response.error) {
+      alert('Login incorrecto')
+      this.router.navigate(['/login'])
+    } else {
+      alert('Login correcto')
+      this.router.navigate(['/rutas'])
+    }
 
-    this.router.navigate(['/rutas'])
+
+
 
   }
 
