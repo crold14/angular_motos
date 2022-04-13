@@ -31,7 +31,7 @@ export class RutasService {
     return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/usuarios/login', pUser))
   }
   getById(pRutasId: number) {
-    return firstValueFrom(this.httpClient.get<any>(this.baseUrl + `/usuarios/${pRutasId}`))
+    return firstValueFrom(this.httpClient.get<any>(this.baseUrl + `/rutas/${pRutasId}`))
   }
 
 
