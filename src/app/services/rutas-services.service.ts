@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
+import { LEADING_TRIVIA_CHARS } from '@angular/compiler/src/render3/view/template';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import { Ruta } from '../interfaces/rutas.interfaces';
 import { Usuario } from '../interfaces/usuario.interface';
 
 
@@ -28,7 +30,9 @@ export class RutasService {
   loginUser(pUser: Usuario) {
     return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/usuarios/login', pUser))
   }
-
+  getById(pRutasId: number) {
+    return firstValueFrom(this.httpClient.get<any>(this.baseUrl + `/usuarios/${pRutasId}`))
+  }
 
 
 

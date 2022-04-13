@@ -9,6 +9,7 @@ import { RutasComponent } from './rutas/rutas.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistroComponent } from './registro/registro.component';
+import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RegistroComponent } from './registro/registro.component';
     RutasComponent,
     LoginComponent,
     RegistroComponent,
+    DetalleRutasComponent,
   ],
   imports: [
     BrowserModule,
