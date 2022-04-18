@@ -5,10 +5,10 @@ export interface Ruta {
     dist: number,
     img: string,
     dif: string,
-    latini: string,
-    longini: string,
-    latfin: string,
-    longfin: string,
+    latini: number,
+    longini: number,
+    latfin: number,
+    longfin: number,
 
 
 
