@@ -1,13 +1,11 @@
 <div class="cabecera">
     <figure>
-        <img src="https://image.shutterstock.com/image-photo/skye-island-scotland-panorama-area-260nw-1469202971.jpg"
-            alt="">
+        <img src="https://image.shutterstock.com/image-photo/skye-island-scotland-panorama-area-260nw-1469202971.jpg" alt="">
     </figure>
 </div>
 
 <form class="d-flex">
-    <input class="form-control me-2" type="search" placeholder="Search" id="filtraTexto" aria-label="Search"
-        (input)="onInput($event)">
+    <input class="form-control me-2" type="search" placeholder="Search" id="filtraTexto" aria-label="Search" (input)="onInput($event)">
     <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
 </form>
 <button [routerLink]="['/rutas/new']" routerLinkActive="activo">CREAR UNA NUEVA RUTA</button>

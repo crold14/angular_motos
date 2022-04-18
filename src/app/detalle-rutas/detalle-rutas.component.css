@@ -1,5 +1,6 @@
 .container {
     display: flex;
+
 }
 
 .foto,
@@ -15,4 +16,8 @@ img {
 .button {
     margin-bottom: 30px;
     text-align: center;
+}
+
+mapa {
+    align-items: center;
 }
