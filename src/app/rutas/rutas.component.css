@@ -10,6 +10,7 @@
     background-position: 50%;
 }
 
+
 .rutas {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -26,13 +27,21 @@
 }
 
 .ruta {
-    background-color: lightblue;
+    background-color: black;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid gold;
     border-radius: 15px;
     padding: 10px;
 }
 
+h3 {
+    font-family: cursive;
+    color: gold;
+    text-shadow: -1px -1px 1px #aaa,
+        0px 4px 1px rgba(0, 0, 0, 0.5),
+        4px 4px 5px rgba(0, 0, 0, 0.7),
+        0px 0px 7px rgba(0, 0, 0, 0.4);
+}
 
 
 @media (min-width: 467px) {
@@ -47,4 +56,14 @@
     .rutas {
         grid-template-columns: repeat(5, 1fr);
     }
+}
+
+button {
+    margin: 10px;
+}
+
+.d-flex input {
+    margin-top: 30px;
+    border: 3px solid black;
+
 }

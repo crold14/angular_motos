@@ -3,11 +3,13 @@
 
         <div class="mb-3">
             <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" formControlName="email">
+            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com"
+                formControlName="email">
         </div>
         <div class="mb-3">
             <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" formControlName="password">
+            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password"
+                formControlName="password">
         </div>
         <div class="mb-3">
             <div class="form-check">
@@ -17,9 +19,10 @@
                 </label>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="button" class="btn btn-dark">Sign in</button>
     </form>
     <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#" [routerLink]="['/registro']" routerLinkActive="activo">New around here? Sign up</a>
+    <a class="dropdown-item" href="#" [routerLink]="['/registro']" routerLinkActive="activo">New around here? Sign
+        up</a>
     <a class="dropdown-item" href="#">Forgot password?</a>
 </div>

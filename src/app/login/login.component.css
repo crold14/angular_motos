@@ -2,15 +2,25 @@
     margin-top: 100px;
     margin-bottom: 150px;
     width: 600px;
-    background-color: lightblue;
+    background-color: black;
     border-radius: 15px;
     padding: 10px;
+    font-family: cursive;
+    color: gold;
 }
 
 a {
 
     text-align: center;
-    color: darkblue;
+    color: white;
 
 
 }
+
+/* .ruta {
+    background-color: black;
+    text-align: center;
+    border: 1px solid gold;
+    border-radius: 15px;
+    padding: 10px;
+} */
