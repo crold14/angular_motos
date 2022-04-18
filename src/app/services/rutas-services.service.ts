@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { Ruta } from '../interfaces/rutas.interfaces';
-import { Usuario } from '../interfaces/usuario.interface';
+
 
 
 @Injectable({
@@ -22,13 +22,7 @@ export class RutasService {
     return firstValueFrom(this.httpClient.get<any>(this.baseUrl + '/rutas'))
   }
 
-  registerUser(pNewUser: Usuario) {
-    return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/usuarios/registro', pNewUser))
-  }
 
-  loginUser(pUser: Usuario) {
-    return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/usuarios/login', pUser))
-  }
   getById(pRutasId: number) {
     return firstValueFrom(this.httpClient.get<any>(this.baseUrl + `/rutas/${pRutasId}`))
   }

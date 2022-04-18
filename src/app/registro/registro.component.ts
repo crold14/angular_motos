@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { RutasService } from '../services/rutas-services.service';
+
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-registro',
@@ -16,7 +17,8 @@ export class RegistroComponent implements OnInit {
   formulario: FormGroup;
 
   constructor(
-    private rutasService: RutasService,
+
+    private usersService: UsersService,
     private router: Router
   ) {
 
@@ -58,7 +60,7 @@ export class RegistroComponent implements OnInit {
   }
 
   async onSubmit() {
-    const response = await this.rutasService.registerUser(this.formulario.value)
+    const response = await this.usersService.registerUser(this.formulario.value)
     console.log(this.formulario.value);
     alert('Registro completo')
 
