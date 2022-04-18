@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistroComponent } from './registro/registro.component';
 import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
 import { MapasComponent } from './mapas/mapas.component';
+import { NewRouteFormularioComponent } from './new-route-formulario/new-route-formulario.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MapasComponent } from './mapas/mapas.component';
     RegistroComponent,
     DetalleRutasComponent,
     MapasComponent,
+    NewRouteFormularioComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 export class MapasComponent implements OnInit {
 
   mapa: google.maps.Map;
-  @ViewChild('divMapa') divMapa!: ElementRef;
+  @ViewChild('divMapa') divMapa: ElementRef;
 
   @Input() latini: string;
   @Input() latfin: string;
@@ -26,6 +26,10 @@ export class MapasComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  ngAfterViewInit(): void {
+    this.loadMap();
   }
   loadMap() {
     //carga del mapa

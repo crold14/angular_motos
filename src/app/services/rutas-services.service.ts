@@ -1,5 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { LEADING_TRIVIA_CHARS } from '@angular/compiler/src/render3/view/template';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { Ruta } from '../interfaces/rutas.interfaces';
@@ -32,6 +31,16 @@ export class RutasService {
   }
   getById(pRutasId: number) {
     return firstValueFrom(this.httpClient.get<any>(this.baseUrl + `/rutas/${pRutasId}`))
+  }
+
+  //para meter la cabecera de authentication en la peticion
+  newRuta(pNewRuta: Ruta) {
+    const httpOptions = {
+      headers: new HttpHeaders(
+        { authentication: localStorage.getItem('token') }
+      )
+    }
+    return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/rutas/new', pNewRuta, httpOptions))
   }
 
 

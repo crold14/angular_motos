@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/login'])
     } else {
       alert('Login correcto')
+      localStorage.setItem('token', response.token)
       this.router.navigate(['/rutas'])
     }
 

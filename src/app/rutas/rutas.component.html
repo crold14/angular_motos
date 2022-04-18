@@ -3,6 +3,7 @@
         <img src="https://image.shutterstock.com/image-photo/skye-island-scotland-panorama-area-260nw-1469202971.jpg" alt="">
     </figure>
 </div>
+<button [routerLink]="['/rutas/new']" routerLinkActive="activo">CREAR UNA NUEVA RUTA</button>
 <div class="rutas">
     <div class="ruta" *ngFor="let ruta of arrRutas" [routerLink]="['/rutas', ruta.id]" routerLinkActive="activo">
         <!-- <img [src]="ruta.img" alt=""> -->
