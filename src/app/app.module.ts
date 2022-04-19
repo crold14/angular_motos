@@ -13,6 +13,7 @@ import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
 import { MapasComponent } from './mapas/mapas.component';
 import { NewRouteFormularioComponent } from './new-route-formulario/new-route-formulario.component';
 import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
     MapasComponent,
     NewRouteFormularioComponent,
     EditarPerfilComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

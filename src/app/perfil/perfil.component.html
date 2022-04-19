@@ -1,0 +1,11 @@
+<div class="datos">
+    <p>Nombre: {{userData.name}}</p>
+    <img [src]="userData.img" alt="">
+
+    <p>Email: {{userData.email}}</p>
+    <p>Nickname: {{userData.nickname}}</p>
+    <p>Ciudad: {{userData.city}}</p>
+    <p>Sobre mi: {{userData.description}}</p>
+    <p>Edad: {{userData.age}}</p>
+    <button [routerLink]="['/editarPerfil']" routerLinkActive=" activo">Editar</button>
+</div>
