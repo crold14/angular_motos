@@ -21,7 +21,8 @@
 
         <div class="mb-3">
             <label class="form-label">Sobre mi </label>
-            <input type="text" class="form-control" placeholder="Escribe una breve descripcion sobre ti" formControlName="description">
+            <input type="text" class="form-control" placeholder="Escribe una breve descripcion sobre ti"
+                formControlName="description">
             <p class="error" *ngIf="checkError('description', 'required')  ">El campo Descripcion es requerido</p>
         </div>
 
@@ -52,6 +53,6 @@
 
 
 
-        <input type="submit" value="Registrarse" class="btn btn-info" [disabled]="!formulario.valid">
+        <input type="submit" value="Registrarse" class="btn btn-dark" [disabled]="!formulario.valid">
     </form>
 </div>

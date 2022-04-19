@@ -5,7 +5,8 @@
 
 </div>
 <form class="d-flex">
-    <input class="form-control me-2" type="search" placeholder="Search" id="filtraTexto" aria-label="Search" (input)="onInput($event)">
+    <input class="form-control me-2" type="search" placeholder="Search" id="filtraTexto" aria-label="Search"
+        (input)="onInput($event)">
     <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
 </form>
 <button type="button" class="btn btn-dark" [routerLink]="['/rutas/new']" routerLinkActive="activo">CREAR UNA NUEVA
@@ -19,7 +20,8 @@
 
                 <h3>{{ruta.name}}</h3>
                 <img [src]="ruta.img" alt="">
-                <button [routerLink]="['/rutas', ruta.id]" routerLinkActive="activo">IR A LA RUTA</button>
+                <button type="button" class="btn btn-dark" [routerLink]="['/rutas', ruta.id]"
+                    routerLinkActive="activo">IR A LA RUTA</button>
             </div>
 
         </div>
