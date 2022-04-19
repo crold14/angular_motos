@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom, Observable, Subject } from 'rxjs';
 import { Usuario } from '../interfaces/usuario.interface';
@@ -39,6 +39,32 @@ export class UsersService {
 
   getUsers$(): Observable<boolean> {
     return this.users$.asObservable();
+  }
+  modifyUser(pIdUser: any, pNewData: any) {
+    return firstValueFrom(this.httpClient.put<any>(this.baseUrl + '/usuarios/' + pIdUser, pNewData))
+  }
+
+  getData() {
+    const httpOptions = {
+      headers: new HttpHeaders(
+        { authentication: localStorage.getItem('token') }
+      )
+    }
+    return firstValueFrom(this.httpClient.get<any>(this.baseUrl + '/usuarios/perfil', httpOptions))
+  }
+
+  editProfile(pEditPerfil: Usuario) {
+    const httpOptions = {
+      headers: new HttpHeaders(
+        { authentication: localStorage.getItem('token') }
+      )
+    }
+
+
+
+
+    return firstValueFrom(this.httpClient.put<any>(this.baseUrl + '/usuarios/editarPerfil', pEditPerfil, httpOptions))
+    console.log(pEditPerfil);
   }
 
 
