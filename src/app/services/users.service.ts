@@ -33,6 +33,9 @@ export class UsersService {
   login() {
     this.users$.next(true);
   }
+  logOut() {
+    this.users$.next(false)
+  }
 
   getUsers$(): Observable<boolean> {
     return this.users$.asObservable();

@@ -12,6 +12,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
 import { MapasComponent } from './mapas/mapas.component';
 import { NewRouteFormularioComponent } from './new-route-formulario/new-route-formulario.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NewRouteFormularioComponent } from './new-route-formulario/new-route-fo
     DetalleRutasComponent,
     MapasComponent,
     NewRouteFormularioComponent,
+    EditarPerfilComponent,
   ],
   imports: [
     BrowserModule,

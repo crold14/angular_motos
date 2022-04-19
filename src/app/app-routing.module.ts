@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NewRouteFormularioComponent } from './new-route-formulario/new-route-formulario.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
   { path: 'rutas/new', component: NewRouteFormularioComponent },
   { path: 'rutas/:rutaId', component: DetalleRutasComponent },
+  { path: 'editarPerfil', component: EditarPerfilComponent },
 
 
   { path: '**', redirectTo: '/home' }

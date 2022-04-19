@@ -4,10 +4,9 @@
 }
 
 .cabecera {
-    height: 200px;
-    /* background-image: url("https: //image.shutterstock.com/image-photo/skye-island-scotland-panorama-area-260nw-1469202971.jpg"); */
-    background-size: 100%;
-    background-position: 50%;
+    width: 100%;
+    align-items: center;
+
 }
 
 
@@ -43,6 +42,16 @@ h3 {
         0px 0px 7px rgba(0, 0, 0, 0.4);
 }
 
+button {
+    margin: 10px;
+}
+
+.d-flex input {
+    margin-top: 30px;
+    border: 3px solid black;
+
+}
+
 
 @media (min-width: 467px) {
     .rutas {
@@ -56,14 +65,4 @@ h3 {
     .rutas {
         grid-template-columns: repeat(5, 1fr);
     }
-}
-
-button {
-    margin: 10px;
-}
-
-.d-flex input {
-    margin-top: 30px;
-    border: 3px solid black;
-
 }

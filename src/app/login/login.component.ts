@@ -37,6 +37,8 @@ export class LoginComponent implements OnInit {
   }
 
   async onSubmit() {
+    console.log('hola');
+
     const response = await this.usersService.loginUser(this.formulario.value)
 
     console.log(response);

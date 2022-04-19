@@ -34,6 +34,7 @@ export class AppComponent {
   onClick() {
     localStorage.removeItem('token');
     this.router.navigate(['/login'])
+    this.usersService.logOut()
   }
 }
 
