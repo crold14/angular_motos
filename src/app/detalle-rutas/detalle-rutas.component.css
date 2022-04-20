@@ -38,8 +38,8 @@ img {
     margin-left: 20px;
 }
 
-.mapa {
-    align-items: center;
+.wrapper {
+    margin: 0 100px;
 }
 
 .group {

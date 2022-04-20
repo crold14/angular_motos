@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ReviewsService } from '../services/reviews.service';
+
+
 
 @Component({
   selector: 'app-new-review',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewReviewComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(
+    private reviewsService: ReviewsService,
+    private router: Router,
+  ) {
+
+  }
 
   ngOnInit(): void {
+
   }
 
 }
