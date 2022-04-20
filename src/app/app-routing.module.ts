@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'editarPerfil', component: EditarPerfilComponent },
   { path: 'cambiaContraseña', component: ChangePasswordComponent },
   { path: 'newReview', component: NewReviewComponent },
+  { path: 'rutas/:rutaId/newReview', component: NewReviewComponent },
 
 
   { path: '**', redirectTo: '/home' }

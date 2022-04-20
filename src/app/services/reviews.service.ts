@@ -22,4 +22,7 @@ export class ReviewsService {
     }
     return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/reviews/' + idRoute + '/new', newData, httpOptions))
   }
+  getById(idRoute: number) {
+    return firstValueFrom(this.httpClient.get<any>(this.baseUrl + '/reviews/' + idRoute))
+  }
 }

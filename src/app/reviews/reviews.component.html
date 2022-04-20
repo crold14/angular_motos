@@ -1,0 +1,9 @@
+<h2>Opiniones
+</h2>
+<button class="btn btn-dark" [routerLink]="['/rutas',rutaId ,'newReview']" routerLinkActive="activo">Añadir reseña</button>
+<div class="reseña" *ngFor="let review of arrReviews">
+    <p>Titulo: {{review.title}}</p>
+    <hr>
+    <p>Comentario: {{review.coment}}</p>
+    <p>Valoracion: {{review.val}}</p>
+</div>

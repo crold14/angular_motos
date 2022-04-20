@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ReviewsService } from '../services/reviews.service';
 
 @Component({
   selector: 'reviews',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  rutaId: string;
+  arrReviews: any
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private reviewsService: ReviewsService) {
+    this.arrReviews = []
   }
 
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe(async params => {
+      this.rutaId = params['rutaId']
+
+      const response = await this.reviewsService.getById(params['rutaId'])
+      this.arrReviews = response;
+      console.log(response);
+
+
+
+
+
+    })
+  }
 }
