@@ -49,9 +49,9 @@ export class EditarPerfilComponent implements OnInit {
       img: new FormControl(this.userData.img, [
 
       ]),
-      password: new FormControl(this.userData.password, [
+      // password: new FormControl(this.userData.password, [
 
-      ]),
+      // ]),
 
 
     })

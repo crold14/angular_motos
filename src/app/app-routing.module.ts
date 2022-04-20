@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
 import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 import { HomeComponent } from './home/home.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'rutas/:rutaId', component: DetalleRutasComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'editarPerfil', component: EditarPerfilComponent },
+  { path: 'cambiaContraseña', component: ChangePasswordComponent },
 
 
   { path: '**', redirectTo: '/home' }
