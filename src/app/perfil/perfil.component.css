@@ -1,0 +1,19 @@
+button {
+    margin: 20px;
+}
+
+.datos {
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    width: 600px;
+    background-color: black;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: cursive;
+    color: gold;
+}
+
+h3 {
+    text-align: center;
+}

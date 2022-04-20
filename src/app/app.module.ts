@@ -15,6 +15,7 @@ import { NewRouteFormularioComponent } from './new-route-formulario/new-route-fo
 import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PerfilComponent } from './perfil/perfil.component';
     EditarPerfilComponent,
     ReviewsComponent,
     PerfilComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule,

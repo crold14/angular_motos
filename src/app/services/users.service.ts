@@ -59,12 +59,19 @@ export class UsersService {
         { authentication: localStorage.getItem('token') }
       )
     }
-
-
-
-
     return firstValueFrom(this.httpClient.put<any>(this.baseUrl + '/usuarios/editarPerfil', pEditPerfil, httpOptions))
-    console.log(pEditPerfil);
+      ;
+  }
+
+  changePassword(pNewPassword: Usuario) {
+    const httpOptions = {
+      headers: new HttpHeaders(
+        { authentication: localStorage.getItem('token') }
+      )
+    }
+    return firstValueFrom(this.httpClient.put<any>(this.baseUrl + '/usuarios/changePassword', pNewPassword, httpOptions))
+
+
   }
 
 
