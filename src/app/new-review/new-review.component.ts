@@ -10,6 +10,7 @@ import { ReviewsService } from '../services/reviews.service';
 })
 export class NewReviewComponent implements OnInit {
 
+  estrella: string
   formulario: FormGroup
   rutaId: number
 
@@ -19,6 +20,7 @@ export class NewReviewComponent implements OnInit {
       private reviewsService: ReviewsService,
       private router: Router
     ) {
+    this.estrella = ''
     this.formulario = new FormGroup({
       title: new FormControl('', [
       ]),
@@ -34,18 +36,19 @@ export class NewReviewComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(async params => {
       this.rutaId = params['rutaId']
+
     })
   }
 
   async onSubmit() {
     const response = await this.reviewsService.newReview(this.rutaId, this.formulario.value)
     console.log(this.formulario.value);
-    console.log(response);
+
 
 
     alert('Review registrada')
 
-    this.router.navigate(['/rutas'])
+    this.router.navigate(['/rutas/', this.rutaId])
 
   }
   checkError(fieldName: string, errorType: string) {

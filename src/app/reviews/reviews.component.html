@@ -5,5 +5,11 @@
     <p>Titulo: {{review.title}}</p>
     <hr>
     <p>Comentario: {{review.coment}}</p>
-    <p>Valoracion: {{review.val}}</p>
+    <div [ngSwitch]="review.val">
+        <p *ngSwitchCase="1">Valoracion:⭐</p>
+        <p *ngSwitchCase="2">Valoracion:⭐⭐</p>
+        <p *ngSwitchCase="3">Valoracion:⭐⭐⭐</p>
+        <p *ngSwitchCase="4">Valoracion:⭐⭐⭐⭐</p>
+        <p *ngSwitchCase="5">Valoracion:⭐⭐⭐⭐⭐</p>
+    </div>
 </div>

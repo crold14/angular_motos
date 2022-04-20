@@ -16,7 +16,7 @@
             <label class="form-label">Valoración</label>
             <select formControlName="val" class="form-select form-select-sm" aria-label=".form-select-sm example">
                 <option selected>Valoración</option>
-                <option value="1">Uno⭐</option>
+                <option [value]="1">Uno⭐</option>
                 <option value="2">Dos⭐⭐</option>
                 <option value="3">Tres⭐⭐⭐</option>
                 <option value="4">Cuatro⭐⭐⭐⭐</option>
@@ -25,7 +25,7 @@
             <p class="error" *ngIf="checkError('val', 'required')">El campo descripcion es requerido</p>
         </div>
 
-        <input type="submit" value="Añadir ruta" class="btn btn-info" [disabled]="!formulario.valid" [routerLink]="['/rutas']" routerLinkActive="activo">
+        <input type="submit" value="Añadir reseña" class="btn btn-info" [disabled]="!formulario.valid" routerLinkActive="activo">
 
     </form>
 </div>
