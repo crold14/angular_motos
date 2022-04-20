@@ -5,6 +5,7 @@ import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
 import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { NewReviewComponent } from './new-review/new-review.component';
 import { NewRouteFormularioComponent } from './new-route-formulario/new-route-formulario.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { RegistroComponent } from './registro/registro.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
   { path: 'editarPerfil', component: EditarPerfilComponent },
   { path: 'cambiaContraseña', component: ChangePasswordComponent },
+  { path: 'newReview', component: NewReviewComponent },
 
 
   { path: '**', redirectTo: '/home' }
