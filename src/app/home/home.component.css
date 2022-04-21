@@ -3,10 +3,10 @@ img {
     display: flex;
 }
 
-h1 {
-
+.container h1 {
+    padding: 100px;
     color: gold;
-    font-size: xx-large;
+    font-size: xxx-large;
     text-align: center;
     text-shadow: -1px -1px 1px #aaa,
         0px 4px 1px rgba(0, 0, 0, 0.5),
@@ -19,3 +19,13 @@ h1 {
     color: gold;
     font-size: xx-large;
 } */
+
+.container {
+    height: 700px;
+}
+
+.container p {
+    color: black;
+    margin-left: 100px;
+    margin-right: 100px;
+}

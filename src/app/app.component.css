@@ -1,3 +1,47 @@
-main {
-    margin: 0 100px;
+.wrapper {
+
+
+    /* background-image: url(https://i.pinimg.com/originals/cb/f4/4c/cbf44cebee984583d4604d8d11ea8efa.jpg); */
+    background-image: url(https://www.xtrafondos.com/descargar.php?id=120&resolucion=1920x1200);
+
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.router {
+    margin: 0 200px;
+    background-color: white;
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+
+
+}
+
+
+
+footer a {
+    text-decoration: none;
+    color: white;
+    display: inline;
+}
+
+li {
+    list-style: none;
+
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.social {
+    display: flex;
+    text-align: center;
+    align-items: center;
 }
