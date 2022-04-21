@@ -1,10 +1,11 @@
-<div class="container">
+<div class="container1">
     <h2 class="my-4">Completa para registrar la ruta</h2>
     <div class="container">
         <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class=" px-4 py-3 ">
             <div class="mb-3 ">
                 <label class="form-label">Nombre de la ruta</label>
-                <input type="text" class="form-control" formControlName="name" placeholder="Escribe el nombre para esta ruta">
+                <input type="text" class="form-control" formControlName="name"
+                    placeholder="Escribe el nombre para esta ruta">
                 <p class="error" *ngIf="checkError('name', 'required')">El campo nombre es requerido</p>
             </div>
             <div class="mb-3 ">
@@ -61,9 +62,10 @@
 
             </div>
 
-            <input type="submit" value="Añadir ruta" class="btn btn-info" [disabled]="!formulario.valid">
+            <input type="submit" value="Añadir ruta" class="btn btn-dark" [disabled]="!formulario.valid">
 
         </form>
-        <button type="button" class="btn btn-primary btn-lg" [routerLink]="['/rutas']" routerLinkActive="activo">Volver a las rutas</button>
+        <button type="button" class="btn btn-dark" [routerLink]="['/rutas']" routerLinkActive="activo">Volver a las
+            rutas</button>
     </div>
 </div>
