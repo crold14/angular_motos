@@ -19,6 +19,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { NewReviewComponent } from './new-review/new-review.component';
 import { EventsComponent } from './events/events.component';
 import { NewEventComponent } from './new-event/new-event.component';
+import { DetalleEventsComponent } from './detalle-events/detalle-events.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { NewEventComponent } from './new-event/new-event.component';
     NewReviewComponent,
     EventsComponent,
     NewEventComponent,
+    DetalleEventsComponent,
   ],
   imports: [
     BrowserModule,

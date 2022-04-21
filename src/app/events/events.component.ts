@@ -8,12 +8,19 @@ import { EventsService } from '../services/events.service';
 })
 export class EventsComponent implements OnInit {
   arrEvents: any
+  login: boolean
+  asistentes: any
+
   constructor(
     private eventsService: EventsService
   ) {
-    this.arrEvents = []
+    this.arrEvents = [];
+    this.login = false;
+    this.asistentes = []
+    if (localStorage.getItem('token')) {
+      this.login = true
+    }
   }
-
   async ngOnInit() {
     const response = await this.eventsService.getALL()
     this.arrEvents = response;
@@ -34,4 +41,10 @@ export class EventsComponent implements OnInit {
     this.arrEvents = arrBusqueda;
 
   }
+
+  async onClick(pEventId) {
+    this.eventsService.inscribe(pEventId)
+
+  }
+
 }

@@ -10,4 +10,12 @@
     <p>Evento creado por: {{evento.nickname}}</p>
     <hr>
     <p>{{evento.description}}</p>
+    <button (click)="onClick(evento.id)" *ngIf="login" class="btn btn-dark">Confirmar asistencia</button>
+    <button [routerLink]="['/eventos',evento.id]" brouterLinkActive="activo" class="btn btn-dark">Ver chat</button>
+    <div class="asistentes">
+        <h4>Asitentes:</h4>
+        <li *ngFor="let asistentes of evento.users"> {{asistentes.name}}
+        </li>
+
+    </div>
 </div>

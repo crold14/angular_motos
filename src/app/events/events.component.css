@@ -28,3 +28,14 @@ h1 {
     margin-bottom: 10px;
 
 }
+
+li {
+    text-decoration: none;
+    list-style: none;
+    font-size: medium;
+}
+
+button {
+    margin-bottom: 10px;
+    margin-right: 800px;
+}

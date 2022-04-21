@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { DetalleEventsComponent } from './detalle-events/detalle-events.component';
 import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
 import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 import { EventsComponent } from './events/events.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'rutas/:rutaId/newReview', component: NewReviewComponent },
   { path: 'eventos', component: EventsComponent },
   { path: 'newEvento', component: NewEventComponent },
+  { path: 'eventos/:eventId', component: DetalleEventsComponent },
 
 
   { path: '**', redirectTo: '/home' }
