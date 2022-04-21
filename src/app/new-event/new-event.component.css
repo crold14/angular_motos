@@ -1,19 +1,14 @@
-button {
-    margin: 20px;
-}
-
-.datos {
-    margin: 0 auto;
+.container {
     margin-top: 100px;
     margin-bottom: 150px;
     width: 600px;
     background-color: black;
     border-radius: 15px;
     padding: 10px;
-
+    text-align: center;
     color: gold;
 }
 
-h3 {
-    text-align: center;
+.black {
+    color: black;
 }

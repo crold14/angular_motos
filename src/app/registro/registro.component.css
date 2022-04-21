@@ -27,7 +27,7 @@ input.ng-invalid.ng-touched {
     background-color: black;
     border-radius: 15px;
     padding: 10px;
-    font-family: cursive;
+
     color: gold;
 }
 

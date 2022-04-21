@@ -13,7 +13,7 @@
 
 .descripcion {
     margin: 50px;
-    font-family: cursive;
+
     font-size: x-large;
     color: black;
 }
@@ -23,7 +23,7 @@ img {
 }
 
 .titulo h2 {
-    font-family: cursive;
+
     font-size: 50px;
     text-align: center;
     color: gold;

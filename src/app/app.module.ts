@@ -17,6 +17,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { NewReviewComponent } from './new-review/new-review.component';
+import { EventsComponent } from './events/events.component';
+import { NewEventComponent } from './new-event/new-event.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { NewReviewComponent } from './new-review/new-review.component';
     PerfilComponent,
     ChangePasswordComponent,
     NewReviewComponent,
+    EventsComponent,
+    NewEventComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
 import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
+import { EventsComponent } from './events/events.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { NewEventComponent } from './new-event/new-event.component';
 import { NewReviewComponent } from './new-review/new-review.component';
 import { NewRouteFormularioComponent } from './new-route-formulario/new-route-formulario.component';
 import { PerfilComponent } from './perfil/perfil.component';
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'cambiaContraseña', component: ChangePasswordComponent },
   { path: 'newReview', component: NewReviewComponent },
   { path: 'rutas/:rutaId/newReview', component: NewReviewComponent },
+  { path: 'eventos', component: EventsComponent },
+  { path: 'newEvento', component: NewEventComponent },
 
 
   { path: '**', redirectTo: '/home' }

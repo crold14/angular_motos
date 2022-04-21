@@ -1,0 +1,13 @@
+<h1>Eventos creados </h1>
+
+<form class="d-flex">
+
+    <input class="form-control me-2" type="search" placeholder="Search" id="filtraTexto" aria-label="Search" (input)="onInput($event)">
+
+</form>
+<div class="events" *ngFor="let evento of arrEvents">
+    <h2>{{evento.title}}</h2>
+    <p>Evento creado por: {{evento.nickname}}</p>
+    <hr>
+    <p>{{evento.description}}</p>
+</div>

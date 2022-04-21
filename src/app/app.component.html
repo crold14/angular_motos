@@ -19,11 +19,9 @@
               Eventos
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Crear evento</a></li>
-              <li><a class="dropdown-item" href="#">Buscar evento</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+              <li><a class="dropdown-item" href="#" [routerLink]="['/newEvento']" routerLinkActive=" activo" *ngIf="login">Crear evento</a></li>
+              <li><a class="dropdown-item" href="#" [routerLink]="['/eventos']" routerLinkActive=" activo">Buscar evento</a></li>
+
               <!--               <li><a class="dropdown-item" href="#">Something else here</a></li> -->
             </ul>
           </li>
