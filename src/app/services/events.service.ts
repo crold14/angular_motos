@@ -46,4 +46,17 @@ export class EventsService {
   getById(eventId: number) {
     return firstValueFrom(this.httpClient.get<any>(this.baseUrl + `/events/${eventId}`))
   }
+  getAllComents(idEvent: number) {
+    return firstValueFrom(this.httpClient.get<any>(this.baseUrl + '/events/' + idEvent + '/coments'))
+  }
+
+  newComentario(pData: any, eventId: number) {
+    const httpOptions = {
+      headers: new HttpHeaders(
+        { authentication: localStorage.getItem('token') }
+      )
+    }
+    return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/events/' + eventId, pData, httpOptions))
+  }
+
 }

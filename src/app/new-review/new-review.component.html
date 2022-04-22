@@ -3,8 +3,7 @@
     <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class=" px-4 py-3 ">
         <div class="mb-3 ">
             <label class="form-label">Titulo</label>
-            <input type="text" class="form-control" formControlName="title"
-                placeholder="Escribe el titulo de tu reseña">
+            <input type="text" class="form-control" formControlName="title" placeholder="Escribe el titulo de tu reseña">
             <p class="error" *ngIf="checkError('title', 'required')">El campo nombre es requerido</p>
         </div>
         <div class="mb-3 ">
@@ -26,8 +25,7 @@
             <p class="error" *ngIf="checkError('val', 'required')">El campo descripcion es requerido</p>
         </div>
 
-        <input type="submit" value="Añadir reseña" class="btn btn-dark" [disabled]="!formulario.valid"
-            [routerLink]="['/rutas']" routerLinkActive="activo">
+        <input type="submit" value="Añadir reseña" class="btn btn-dark" [disabled]="!formulario.valid">
 
     </form>
 </div>

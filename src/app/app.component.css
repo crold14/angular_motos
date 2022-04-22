@@ -10,8 +10,11 @@
 }
 
 .router {
-    margin: 0 200px;
+    /* margin: 0 200px; */
+    width: 70%;
     background-color: white;
+    padding: 20px;
+    margin: 0 auto;
 
 }
 

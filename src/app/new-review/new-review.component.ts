@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReviewsService } from '../services/reviews.service';
 
@@ -23,12 +23,15 @@ export class NewReviewComponent implements OnInit {
     this.estrella = ''
     this.formulario = new FormGroup({
       title: new FormControl('', [
+        Validators.required,
       ]),
 
       coment: new FormControl('', [
+        Validators.required,
       ]),
 
       val: new FormControl('', [
+        Validators.required,
       ]),
     })
   }
@@ -41,15 +44,18 @@ export class NewReviewComponent implements OnInit {
   }
 
   async onSubmit() {
-    const response = await this.reviewsService.newReview(this.rutaId, this.formulario.value)
-    console.log(this.formulario.value);
+    this.activatedRoute.params.subscribe(async params => {
+      this.rutaId = params['rutaId']
+
+      const response = await this.reviewsService.newReview(this.rutaId, this.formulario.value)
+      console.log(this.formulario.value);
 
 
 
-    alert('Review registrada')
+      alert('Review registrada')
 
-    this.router.navigate(['/rutas/', this.rutaId])
-
+      this.router.navigate(['/rutas/', this.rutaId])
+    })
   }
   checkError(fieldName: string, errorType: string) {
     return this.formulario.get(fieldName).hasError(errorType) && this.formulario.get(fieldName).touched;

@@ -6,8 +6,10 @@
     <p>Email: {{userData.email}}</p>
     <p>Nickname: {{userData.nickname}}</p>
     <p>Ciudad: {{userData.city}}</p>
-    <p>Sobre mi:</p>
-    <textarea> {{userData.description}}</textarea>
+    <div class="description">
+        <p>Sobre mi:</p>
+        <p>{{userData.description}}</p>
+    </div>
 
     <p>Edad: {{userData.age}}</p>
     <button [routerLink]="['/editarPerfil']" routerLinkActive=" activo">Editar</button>

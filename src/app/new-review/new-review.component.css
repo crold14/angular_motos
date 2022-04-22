@@ -5,8 +5,11 @@
     background-color: black;
     border-radius: 15px;
     padding: 10px;
-
     color: gold;
+}
+
+.container p {
+    color: red;
 }
 
 .black {

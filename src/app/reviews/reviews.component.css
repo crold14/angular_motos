@@ -10,6 +10,7 @@
 }
 
 h2 {
+    margin-top: 30px;
     margin-bottom: 15px;
 
     font-size: 40px;
@@ -24,4 +25,8 @@ h2 {
 button {
     align-items: center;
     margin-bottom: 15px;
+}
+
+.reseña {
+    font-size: 1em;
 }
