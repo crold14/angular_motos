@@ -9,6 +9,9 @@
 
 } */
 
+
+
+
 input {
     margin-right: 10px;
     margin-left: 10px;
@@ -37,6 +40,7 @@ input {
     border: 1px solid gold;
     border-radius: 15px;
     padding: 10px;
+    opacity: 1;
     /* height: 300px; */
 
 }

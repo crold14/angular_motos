@@ -46,11 +46,9 @@ export class NewReviewComponent implements OnInit {
   async onSubmit() {
     this.activatedRoute.params.subscribe(async params => {
       this.rutaId = params['rutaId']
-
-      const response = await this.reviewsService.newReview(this.rutaId, this.formulario.value)
       console.log(this.formulario.value);
 
-
+      const response = await this.reviewsService.newReview(this.rutaId, this.formulario.value)
 
       alert('Review registrada')
 

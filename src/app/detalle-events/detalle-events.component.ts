@@ -13,6 +13,7 @@ export class DetalleEventsComponent implements OnInit {
   comentarios: any;
   formulario: FormGroup;
 
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private eventsService: EventsService,
