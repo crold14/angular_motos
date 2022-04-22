@@ -11,10 +11,15 @@ export class ReviewsComponent implements OnInit {
 
   rutaId: string;
   arrReviews: any
+  login: boolean
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private reviewsService: ReviewsService) {
     this.arrReviews = []
+    if (localStorage.getItem('token')) {
+      this.login = true
+    }
   }
 
   ngOnInit(): void {

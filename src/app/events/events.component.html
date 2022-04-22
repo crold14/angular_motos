@@ -5,17 +5,24 @@
     <input class="form-control me-2" type="search" placeholder="Search" id="filtraTexto" aria-label="Search" (input)="onInput($event)">
 
 </form>
-<div class="events" *ngFor="let evento of arrEvents">
-    <h2>{{evento.title}}</h2>
-    <p>Evento creado por: {{evento.nickname}}</p>
-    <hr>
-    <p>{{evento.description}}</p>
-    <button (click)="onClick(evento.id)" *ngIf="login" class="btn btn-dark">Confirmar asistencia</button>
-    <button [routerLink]="['/eventos',evento.id]" brouterLinkActive="activo" class="btn btn-dark">Ver chat</button>
-    <div class="asistentes">
-        <h4>Asitentes:</h4>
-        <li *ngFor="let asistentes of evento.users"> {{asistentes.name}}
-        </li>
-
+<div class="panel panel-default events" *ngFor="let evento of arrEvents">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong></strong>{{evento.title}}</h3>
+        <p>Evento creado por: {{evento.nickname}}</p>
     </div>
-</div>
+    <div class="panel-body">
+        {{evento.description}}
+    </div>
+
+    <div class="panel-footer">
+        <div class="buttons">
+            <button (click)="onClick(evento.id)" *ngIf="login" class="btn btn-dark">Confirmar asistencia</button>
+            <button [routerLink]="['/eventos',evento.id]" brouterLinkActive="activo" class="btn btn-dark">Ver chat</button>
+        </div>
+        <div class="asistentes">
+            <h4>Asitentes:</h4>
+            <li *ngFor="let asistentes of evento.users"> {{asistentes.name}}
+            </li>
+
+        </div>
+    </div>

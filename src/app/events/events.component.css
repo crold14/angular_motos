@@ -1,16 +1,16 @@
 .events {
     border: 2px solid black;
     margin: 5px 0px;
-
+    /* 
     font-size: x-large;
     color: black;
-    border-radius: 10px;
-    background-color: lightgray;
+    border-radius: 10px; */
+    /* background-color: lightgray; */
     padding: 10px;
 }
 
 h1 {
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 40px;
 
     font-size: 40px;
@@ -23,10 +23,15 @@ h1 {
 }
 
 .d-flex input {
-    margin-top: 30px;
+    margin-top: 20px;
     border: 3px solid black;
     margin-bottom: 10px;
 
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 li {
@@ -36,6 +41,7 @@ li {
 }
 
 button {
+    margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 800px;
+    margin-right: 20px;
 }

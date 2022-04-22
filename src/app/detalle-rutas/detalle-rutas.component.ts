@@ -11,12 +11,16 @@ import { RutasService } from '../services/rutas-services.service';
 export class DetalleRutasComponent implements OnInit {
 
   detalle: Ruta;
+  login: boolean
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private rutasService: RutasService,
   ) {
     this.detalle = null;
+    if (localStorage.getItem('token')) {
+      this.login = true
+    }
   }
 
   ngOnInit(): void {
