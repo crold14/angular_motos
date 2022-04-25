@@ -15,7 +15,7 @@ export class RutasService {
   constructor(
     private httpClient: HttpClient
   ) {
-    this.baseUrl = 'http://localhost:3000/api'
+    this.baseUrl = 'https://ridersroutes.herokuapp.com/api'
   }
 
   getALL(pPage: number = 1) {

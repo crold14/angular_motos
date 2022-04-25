@@ -15,7 +15,7 @@ export class UsersService {
   constructor(
     private httpClient: HttpClient
   ) {
-    this.baseUrl = 'http://localhost:3000/api';
+    this.baseUrl = 'https://ridersroutes.herokuapp.com/api';
 
     this.users$ = new Subject();
   }
