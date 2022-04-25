@@ -12,6 +12,7 @@ export class DetalleEventsComponent implements OnInit {
 
   comentarios: any;
   formulario: FormGroup;
+  arrAsistentes: any
 
 
   constructor(
@@ -20,6 +21,7 @@ export class DetalleEventsComponent implements OnInit {
     private router: Router
   ) {
     this.comentarios = null;
+    this.arrAsistentes = []
     this.formulario = new FormGroup({
 
       comentario: new FormControl('', [
@@ -35,6 +37,8 @@ export class DetalleEventsComponent implements OnInit {
       const response = await this.eventsService.getAllComents(params['eventId'])
       console.log(response)
       this.comentarios = response.reverse()
+      const asistentes = await this.eventsService.getALL()
+      this.arrAsistentes = response;
     });
   }
 

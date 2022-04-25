@@ -24,7 +24,8 @@ input {
     gap: 20px;
     /* max-width: 1000px; */
     margin: 0 auto;
-
+    margin-top: 30px;
+    margin-bottom: 50px;
 
 }
 
@@ -35,6 +36,7 @@ input {
 }
 
 .ruta {
+
     background-color: black;
     text-align: center;
     border: 1px solid gold;
@@ -54,6 +56,10 @@ h3 {
         0px 0px 7px rgba(0, 0, 0, 0.4);
 }
 
+.container {
+
+    margin-bottom: 50px;
+}
 
 
 button {

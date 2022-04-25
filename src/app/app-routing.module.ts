@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ComunidadComponent } from './comunidad/comunidad.component';
 import { DetalleEventsComponent } from './detalle-events/detalle-events.component';
 import { DetalleRutasComponent } from './detalle-rutas/detalle-rutas.component';
 import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
@@ -30,6 +31,8 @@ const routes: Routes = [
   { path: 'eventos', component: EventsComponent },
   { path: 'newEvento', component: NewEventComponent },
   { path: 'eventos/:eventId', component: DetalleEventsComponent },
+  { path: 'comunidad', component: ComunidadComponent },
+
 
 
   { path: '**', redirectTo: '/home' }

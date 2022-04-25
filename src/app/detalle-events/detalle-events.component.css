@@ -28,3 +28,11 @@ input {
 .fecha {
     font-size: small;
 }
+
+.asistentes {
+    margin-top: 30px;
+}
+
+h3 {
+    margin-top: 20px;
+}
