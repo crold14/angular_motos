@@ -15,6 +15,7 @@ export class RegistroComponent implements OnInit {
 
 
   formulario: FormGroup;
+  files: any[];
 
   constructor(
 
@@ -60,14 +61,32 @@ export class RegistroComponent implements OnInit {
   }
 
   async onSubmit() {
-    const response = await this.usersService.registerUser(this.formulario.value)
-    console.log(this.formulario.value);
+    // const response = await this.usersService.registerUser(this.formulario.value)
+    // console.log(this.formulario.value);
+    // alert('Registro completo')
+
+    // this.router.navigate(['/login'])
+
+    let fd = new FormData();
+    fd.append('imagen', this.files[0]);
+    fd.append('name', this.formulario.value.name);
+    fd.append('nickname', this.formulario.value.nickname);
+    fd.append('city', this.formulario.value.city);
+    fd.append('description', this.formulario.value.description);
+    fd.append('age', this.formulario.value.age);
+    fd.append('email', this.formulario.value.email);
+    fd.append('password', this.formulario.value.password);
+
+    this.usersService.registerUser(fd);
+
     alert('Registro completo')
 
     this.router.navigate(['/login'])
-
   }
 
+  onChange($event) {
+    this.files = $event.target.files;
+  }
 
 
   checkError(fieldName: string, errorType: string) {

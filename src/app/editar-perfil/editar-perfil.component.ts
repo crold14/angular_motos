@@ -12,7 +12,8 @@ import { UsersService } from '../services/users.service';
 export class EditarPerfilComponent implements OnInit {
 
   formulario: FormGroup;
-  userData: any
+  userData: any;
+  files: any[]
 
   constructor(
     private userService: UsersService,
@@ -59,10 +60,25 @@ export class EditarPerfilComponent implements OnInit {
 
   }
 
-  async onSubmit() {
-    const response = await this.userService.editProfile(this.formulario.value)
-    console.log(this.formulario.value);
+  onChange($event) {
+    this.files = $event.target.files;
+  }
 
+  async onSubmit() {
+    // const response = await this.userService.editProfile(this.formulario.value)
+    // console.log(this.formulario.value);
+
+    let fd = new FormData();
+    fd.append('imagen', this.files[0]);
+    fd.append('name', this.formulario.value.name);
+    fd.append('nickname', this.formulario.value.nickname);
+    fd.append('city', this.formulario.value.city);
+    fd.append('description', this.formulario.value.description);
+    fd.append('age', this.formulario.value.age);
+    fd.append('email', this.formulario.value.email);
+    fd.append('password', this.formulario.value.password);
+
+    const response = await this.userService.editProfile(fd);
 
     alert('Perfil actualizado')
 

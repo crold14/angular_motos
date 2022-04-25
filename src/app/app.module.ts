@@ -20,6 +20,7 @@ import { NewReviewComponent } from './new-review/new-review.component';
 import { EventsComponent } from './events/events.component';
 import { NewEventComponent } from './new-event/new-event.component';
 import { DetalleEventsComponent } from './detalle-events/detalle-events.component';
+import { ComunidadComponent } from './comunidad/comunidad.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { DetalleEventsComponent } from './detalle-events/detalle-events.componen
     EventsComponent,
     NewEventComponent,
     DetalleEventsComponent,
+    ComunidadComponent,
   ],
   imports: [
     BrowserModule,

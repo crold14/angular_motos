@@ -22,7 +22,7 @@ export class UsersService {
 
 
 
-  registerUser(pNewUser: Usuario) {
+  registerUser(pNewUser: FormData) {
     return firstValueFrom(this.httpClient.post<any>(this.baseUrl + '/usuarios/registro', pNewUser))
   }
 
@@ -53,7 +53,12 @@ export class UsersService {
     return firstValueFrom(this.httpClient.get<any>(this.baseUrl + '/usuarios/perfil', httpOptions))
   }
 
-  editProfile(pEditPerfil: Usuario) {
+  getComunidad() {
+
+    return firstValueFrom(this.httpClient.get<any>(this.baseUrl + '/usuarios'))
+  }
+
+  editProfile(pEditPerfil: FormData) {
     const httpOptions = {
       headers: new HttpHeaders(
         { authentication: localStorage.getItem('token') }
