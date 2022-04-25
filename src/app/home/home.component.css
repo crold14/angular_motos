@@ -1,5 +1,5 @@
 .container h1 {
-    margin: 50px;
+    margin: 20px 50px 30px 50px;
     color: gold;
     font-size: xxx-large;
     text-align: center;
@@ -9,12 +9,22 @@
         0px 0px 7px rgba(0, 0, 0, 0.4);
 }
 
-.container {
-    height: 700px;
+.carousel-inner {
+    width: 80%;
+
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .container p {
     color: black;
     margin-left: 100px;
     margin-right: 100px;
+}
+
+
+span {
+    color: black;
+    background-color: black;
 }

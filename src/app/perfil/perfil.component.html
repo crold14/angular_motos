@@ -1,17 +1,18 @@
+<h1>Mi perfil</h1>
 <div class="datos" *ngIf="userData">
-    <h3>Mi perfil</h3>
+    <h3>Datos</h3>
     <p>Nombre: {{userData.name}}</p>
     <!-- <img [src]="userData.img" alt=""> -->
 
-    <p>Email: {{userData.email}}</p>
+    <p class="email">Email: {{userData.email}}</p>
     <p>Nickname: {{userData.nickname}}</p>
     <p>Ciudad: {{userData.city}}</p>
     <div class="description">
         <p>Sobre mi:</p>
-        <p>{{userData.description}}</p>
+        <p class="margen">{{userData.description}}</p>
     </div>
 
     <p>Edad: {{userData.age}}</p>
-    <button [routerLink]="['/editarPerfil']" routerLinkActive=" activo">Editar</button>
-    <button [routerLink]="['/cambiaContraseña']" routerLinkActive=" activo">Cambiar contraseña</button>
+    <button class="btn btn-dark" [routerLink]="['/editarPerfil']" routerLinkActive=" activo">Editar</button>
+    <button class="btn btn-dark" [routerLink]="['/cambiaContraseña']" routerLinkActive=" activo">Cambiar contraseña</button>
 </div>

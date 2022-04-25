@@ -9,11 +9,9 @@
     padding: 10px;
 }
 
-h2 {
+h1 {
     margin-top: 30px;
-    margin-bottom: 15px;
-
-    font-size: 40px;
+    margin-bottom: 50px;
     text-align: center;
     color: gold;
     text-shadow: -1px -1px 1px #aaa,
@@ -29,4 +27,8 @@ button {
 
 .reseña {
     font-size: 1em;
+}
+
+.fecha {
+    font-size: small;
 }

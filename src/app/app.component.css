@@ -1,16 +1,10 @@
 .wrapper {
-
-
-    /* background-image: url(https://i.pinimg.com/originals/cb/f4/4c/cbf44cebee984583d4604d8d11ea8efa.jpg); */
     background-image: url(https://www.xtrafondos.com/descargar.php?id=120&resolucion=1920x1200);
-
-    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .router {
-    /* margin: 0 200px; */
     width: 70%;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -25,11 +19,13 @@ footer {
     color: white;
     text-align: center;
     align-items: center;
-
+    padding: 15px;
 
 }
 
-
+i {
+    margin: 5px
+}
 
 footer a {
     text-decoration: none;
@@ -49,4 +45,21 @@ li {
     display: flex;
     text-align: center;
     align-items: center;
+}
+
+.login {
+    text-decoration: none;
+    color: black;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+}
+
+
+
+@media (min-width:975px) {
+    .login {
+        right: 40px;
+
+    }
 }

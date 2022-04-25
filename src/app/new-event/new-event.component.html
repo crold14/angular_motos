@@ -1,6 +1,6 @@
+<h1>Crea tu evento</h1>
 <div class="container">
-    <h1>Crea tu evento</h1>
-    <hr>
+
     <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class=" px-4 py-3 ">
         <div class="mb-3 ">
             <label class="form-label">Titulo</label>
@@ -10,8 +10,6 @@
         <div class="mb-3 ">
             <label class="form-label">Descripcion del evento</label>
             <textarea type="text" class="form-control" formControlName="description" name="" id="" cols="30" rows="10"></textarea>
-
-            <input type="text" class="form-control" formControlName="description">
             <p class="error" *ngIf="checkError('coment', 'required')">El campo descripcion es requerido</p>
         </div>
 
