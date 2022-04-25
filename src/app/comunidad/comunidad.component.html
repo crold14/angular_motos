@@ -3,7 +3,7 @@
     <div class="usuario" *ngFor="let usuario of this.comunidad">
         <h3>{{usuario.name}}</h3>
         <p>{{usuario.city}}</p>
-        <p>Edad: {{usuario.edad}} años</p>
+        <p>Edad: {{usuario.age}} años</p>
         <p>{{usuario.description}}</p>
         <img [src]="'http://localhost:3000/images/' + usuario.img" alt="">
     </div>
